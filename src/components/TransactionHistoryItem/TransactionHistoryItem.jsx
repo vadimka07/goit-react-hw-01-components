@@ -1,14 +1,15 @@
 import PropTypes, { shape } from "prop-types";
+import { TransactionHistoryTd, TransactionHistoryTr } from "./TransactionHistoryItem.styled";
 
 function TransactionHistoryItem( { transactions } ) {
   return (
     transactions.map( ( { id, type, amount, currency } ) => {
       return (
-        <tr key={ id }>
-          <td>{ type }</td>
-          <td>{ amount }</td>
-          <td>{ currency }</td>
-        </tr>
+        <TransactionHistoryTr key={ id }>
+          <TransactionHistoryTd>{ type }</TransactionHistoryTd>
+          <TransactionHistoryTd>{ amount }</TransactionHistoryTd>
+          <TransactionHistoryTd>{ currency }</TransactionHistoryTd>
+        </TransactionHistoryTr>
 
       )
     } )

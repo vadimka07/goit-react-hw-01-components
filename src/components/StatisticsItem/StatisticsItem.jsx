@@ -1,13 +1,14 @@
 import PropTypes, { shape } from "prop-types";
+import { StatisticsItemStyle } from "./StatisticsItem.styled";
 
 function StatisticsItem( { listItems } ) {
   return (
     listItems.map( ( { id, label, percentage } ) => {
       return (
-        <li className="item" key={ id }>
+        <StatisticsItemStyle key={ id }>
           <span className="label">{ label }</span>
-          <span className="percentage">{ percentage }</span>
-        </li>
+          <span className="percentage">{ percentage }%</span>
+        </StatisticsItemStyle>
       )
     } )
 

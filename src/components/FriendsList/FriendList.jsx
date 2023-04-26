@@ -1,10 +1,10 @@
 import FriendListItem from "../FriendListItem/FriendListItem";
-
+import { FriendListContainer } from "./FriendList.styled";
 function FriendList( { friends } ) {
 return (
-  <ul className="friend-list">
-    <FriendListItem friendsList={friends}/>
-  </ul>
+  <FriendListContainer>
+    <FriendListItem friendsList={ friends }/>
+  </FriendListContainer>
 )
 }
 

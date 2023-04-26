@@ -1,20 +1,26 @@
-import StatisticsList from "../StatisticsList/StatisticsList";
+import ProfileStatisticsList from "../ProfileStatisticsList/ProfileStatisticsList";
+import { ProfileContainer, ThumbnailAvatarContainer, Tag, Name, Location } from "./Profile.styled";
 
 function Profile( { username, location, tag, avatar, stats } ) {
+
   return (
-    <div className="profile">
+    <ProfileContainer>
       <div className="description">
-        <img
-          src={ avatar }
-          alt={ tag }
-          className="avatar"
-        />
-        <p className="name">{ username }</p>
-        <p className="tag">{ tag }</p>
-        <p className="location">{ location }</p>
+        <ThumbnailAvatarContainer>
+          <img
+            src={ avatar }
+            alt={ tag }
+            className="avatar"
+          />
+        </ThumbnailAvatarContainer>
+        <Name>{ username }</Name>
+        <Tag>{ tag }</Tag>
+        <Location>
+          { location }
+        </Location>
       </div>
-      <StatisticsList stats={ stats }/>
-    </div>
+      <ProfileStatisticsList stats={ stats }/>
+    </ProfileContainer>
   )
 }
 

@@ -1,15 +1,17 @@
 import PropTypes, { shape } from "prop-types";
-
+import { FriendListItemStyle, Status, FriendListItemThumbImage } from "./FriendListItem.styled";
 
 function FriendListItem( { friendsList } ) {
   return (
     friendsList.map( ( { avatar, name, isOnline, id } ) => {
       return (
-        <li className="item" key={ id }>
-          <span className="status">{ isOnline }</span>
-          <img className="avatar" src={ avatar } alt="User avatar" width="48"/>
+        <FriendListItemStyle key={ id }>
+          <Status isOnline={ isOnline }></Status>
+          <FriendListItemThumbImage isOnline={ isOnline }>
+            <img className="avatar" src={ avatar } alt="User avatar" width="48"/>
+          </FriendListItemThumbImage>
           <p className="name">{ name }</p>
-        </li>
+        </FriendListItemStyle>
       )
 
     } )

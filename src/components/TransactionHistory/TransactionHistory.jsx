@@ -1,21 +1,21 @@
 import TransactionHistoryItem from "../TransactionHistoryItem/TransactionHistoryItem";
-
+import { TransactionHistoryTable,TransactionHistoryTh, TransactionHistoryThead } from "./TransactionHistory.styled";
 function TransactionHistory( { items } ) {
   return (
 
-    <table className="transaction-history">
-      <thead>
+    <TransactionHistoryTable>
+      <TransactionHistoryThead>
       <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <TransactionHistoryTh>Type</TransactionHistoryTh>
+        <TransactionHistoryTh>Amount</TransactionHistoryTh>
+        <TransactionHistoryTh>Currency</TransactionHistoryTh>
       </tr>
-      </thead>
+      </TransactionHistoryThead>
 
       <tbody>
       <TransactionHistoryItem transactions={ items }/>
       </tbody>
-    </table>
+    </TransactionHistoryTable>
   )
 }
 

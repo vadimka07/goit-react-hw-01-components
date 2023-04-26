@@ -1,15 +1,17 @@
-import StatisticsTitle from "../utils/StatisticsTitle";
-import StatisticsItem from "../utils/StatisticsItem";
+import StatisticsTitle from "../StatisticsTitle/StatisticsTitle";
+import StatisticsItem from "../StatisticsItem/StatisticsItem";
 import PropTypes from "prop-types";
-
+import { StatisticsContainer, StatisticsContainerList } from "./Statistics.styled";
 
 function Statistics( { title, stats } ) {
   return (
     <>
-      <StatisticsTitle title={ title }/>
-      <ul className="stat-list">
-        <StatisticsItem listItems={ stats }/>
-      </ul>
+      <StatisticsContainer>
+        <StatisticsTitle title={ title }/>
+        <StatisticsContainerList>
+          <StatisticsItem listItems={ stats }/>
+        </StatisticsContainerList>
+      </StatisticsContainer>
     </>
   )
 }
