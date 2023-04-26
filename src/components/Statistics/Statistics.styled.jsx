@@ -8,11 +8,11 @@ const StatisticsContainer = styled.div`
   box-shadow: rgba(0, 0, 0, 0.37) 0px 5px 20px;
 `;
 
-const StatisticsContainerList = styled.ul`
+const StatisticsListUl = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none;
   padding: 0;
 `;
 
-export { StatisticsContainer, StatisticsContainerList };
+export { StatisticsContainer, StatisticsListUl };

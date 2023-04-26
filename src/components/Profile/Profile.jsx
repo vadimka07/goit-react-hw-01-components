@@ -1,5 +1,6 @@
 import ProfileStatisticsList from "../ProfileStatisticsList/ProfileStatisticsList";
 import { ProfileContainer, ThumbnailAvatarContainer, Tag, Name, Location } from "./Profile.styled";
+import PropTypes from "prop-types";
 
 function Profile( { username, location, tag, avatar, stats } ) {
 
@@ -25,3 +26,12 @@ function Profile( { username, location, tag, avatar, stats } ) {
 }
 
 export default Profile;
+
+
+Profile.propTypes ={
+  username:PropTypes.string.isRequired,
+  location:PropTypes.string,
+  tag:PropTypes.string,
+  avatar:PropTypes.string,
+  stats:PropTypes.object
+}

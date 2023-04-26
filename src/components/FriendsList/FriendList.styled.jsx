@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FriendListContainer = styled.ul`
+const FriendListUl = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -10,4 +10,4 @@ const FriendListContainer = styled.ul`
   padding: 0;
 `;
 
-export { FriendListContainer };
+export { FriendListUl };

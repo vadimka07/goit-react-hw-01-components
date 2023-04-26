@@ -1,16 +1,21 @@
 import StatisticsTitle from "../StatisticsTitle/StatisticsTitle";
 import StatisticsItem from "../StatisticsItem/StatisticsItem";
 import PropTypes from "prop-types";
-import { StatisticsContainer, StatisticsContainerList } from "./Statistics.styled";
+import { StatisticsContainer, StatisticsListUl } from "./Statistics.styled";
 
 function Statistics( { title, stats } ) {
+  const result = stats.map( ( { id, label, percentage } ) => {
+    return (
+      <StatisticsItem listItemLabel={ label } listItemPercentage={ percentage } key={ id }/>
+    )
+  } )
   return (
     <>
       <StatisticsContainer>
         <StatisticsTitle title={ title }/>
-        <StatisticsContainerList>
-          <StatisticsItem listItems={ stats }/>
-        </StatisticsContainerList>
+        <StatisticsListUl>
+          { result }
+        </StatisticsListUl>
       </StatisticsContainer>
     </>
   )
@@ -18,7 +23,7 @@ function Statistics( { title, stats } ) {
 
 export default Statistics;
 
-
 Statistics.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  stats:PropTypes.array
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import GetRandomHexColor from "../utils/GetRandomColor";
 
-const StatisticsItemStyle = styled.li`
+const StatisticsItemLi = styled.li`
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -26,4 +26,4 @@ const StatisticsItemStyle = styled.li`
 `;
 
 
-export { StatisticsItemStyle };
+export { StatisticsItemLi };

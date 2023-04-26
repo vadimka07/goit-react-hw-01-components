@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-import {StatisticsTitleStyle} from "./StatisticsTitle.styled";
+import {StatisticsTitleH2} from "./StatisticsTitleH2";
 
 function StatisticsTitle( { title } ) {
   return (
-    <StatisticsTitleStyle>{ title }</StatisticsTitleStyle>
+     title  ? <StatisticsTitleH2>{ title }</StatisticsTitleH2> : ''
+
   )
 }
 

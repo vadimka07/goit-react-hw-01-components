@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StatisticsTitleStyle = styled.h2`
+const StatisticsTitleH2 = styled.h2`
   text-transform: uppercase;
   font-size: 28px;
   color: #758291;
@@ -11,4 +11,4 @@ const StatisticsTitleStyle = styled.h2`
 `;
 
 
-export { StatisticsTitleStyle };
+export { StatisticsTitleH2 };

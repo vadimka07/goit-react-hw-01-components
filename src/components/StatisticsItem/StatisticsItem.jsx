@@ -1,17 +1,12 @@
 import PropTypes, { shape } from "prop-types";
-import { StatisticsItemStyle } from "./StatisticsItem.styled";
+import { StatisticsItemLi } from "./StatisticsItem.styled";
 
-function StatisticsItem( { listItems } ) {
+function StatisticsItem( { listItemLabel, listItemPercentage } ) {
   return (
-    listItems.map( ( { id, label, percentage } ) => {
-      return (
-        <StatisticsItemStyle key={ id }>
-          <span className="label">{ label }</span>
-          <span className="percentage">{ percentage }%</span>
-        </StatisticsItemStyle>
-      )
-    } )
-
+    <StatisticsItemLi>
+      <span className="label">{ listItemLabel }</span>
+      <span className="percentage">{ listItemPercentage }%</span>
+    </StatisticsItemLi>
   )
 }
 
@@ -25,4 +20,9 @@ StatisticsItem.propTypes = {
       percentage: PropTypes.number
     } )
   )
+}
+
+StatisticsItem.propTypes = {
+  listItemLabel: PropTypes.string,
+  listItemPercentage: PropTypes.number
 }

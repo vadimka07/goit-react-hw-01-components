@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import StatusIsOnline from "../utils/StatusIsOnline";
 
-const FriendListItemStyle = styled.li`
+const FriendListItemLi = styled.li`
   max-width: 100%;
   height: 90px;
   box-shadow: rgba(0, 0, 0, 0.37) 0px 2px 3px;
@@ -45,4 +45,4 @@ const FriendListItemThumbImage = styled.div`
   }
 `;
 
-export { FriendListItemStyle, Status, FriendListItemThumbImage };
+export { FriendListItemLi, Status, FriendListItemThumbImage };

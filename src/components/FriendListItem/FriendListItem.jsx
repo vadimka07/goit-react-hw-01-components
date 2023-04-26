@@ -1,34 +1,24 @@
-import PropTypes, { shape } from "prop-types";
-import { FriendListItemStyle, Status, FriendListItemThumbImage } from "./FriendListItem.styled";
+import PropTypes from "prop-types";
+import { FriendListItemLi, Status, FriendListItemThumbImage } from "./FriendListItem.styled";
 
-function FriendListItem( { friendsList } ) {
+function FriendListItem( { friendStatus, friendAvatar, friendName } ) {
   return (
-    friendsList.map( ( { avatar, name, isOnline, id } ) => {
-      return (
-        <FriendListItemStyle key={ id }>
-          <Status isOnline={ isOnline }></Status>
-          <FriendListItemThumbImage isOnline={ isOnline }>
-            <img className="avatar" src={ avatar } alt="User avatar" width="48"/>
-          </FriendListItemThumbImage>
-          <p className="name">{ name }</p>
-        </FriendListItemStyle>
-      )
-
-    } )
+    <FriendListItemLi>
+      <Status isOnline={ friendStatus }></Status>
+      <FriendListItemThumbImage isOnline={ friendStatus }>
+        <img className="avatar" src={ friendAvatar } alt="User avatar" width="48"/>
+      </FriendListItemThumbImage>
+      <p className="name">{ friendName }</p>
+    </FriendListItemLi>
   )
 }
 
 export default FriendListItem;
 
 FriendListItem.propTypes = {
-  friendsList: PropTypes.arrayOf(
-    shape( {
-      id: PropTypes.number,
-      isOnline: PropTypes.bool,
-      avatar: PropTypes.string,
-      name: PropTypes.string,
-    } )
-  )
+  friendStatus: PropTypes.bool,
+  friendAvatar: PropTypes.string,
+  friendName: PropTypes.string,
 }
 
 
