@@ -12,7 +12,7 @@ function Statistics( { title, stats } ) {
   return (
     <>
       <StatisticsContainer>
-        <StatisticsTitle title={ title }/>
+        { title && <StatisticsTitle title={ title }/> }
         <StatisticsListUl>
           { result }
         </StatisticsListUl>
